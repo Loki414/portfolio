@@ -30,7 +30,7 @@
 
   // ----- Typing animation -----
   const typingEl = document.querySelector(".typing");
-  const text = "Web Developer | PHP | JavaScript | React";
+  const text = "Software Engineer | Spring Boot | Flutter | ASP.NET";
   let i = 0;
 
   function typing() {
