@@ -17,7 +17,7 @@
   --header-bg: rgba(10, 14, 23, 0.85);
 }
 
-/* Chế độ sáng */
+/* Light theme */
 [data-theme="light"] {
   --bg: #f1f5f9;
   --bg-card: #ffffff;

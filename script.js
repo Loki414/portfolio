@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  // ----- Theme (sáng/tối) -----
+  // ----- Theme (light/dark) -----
   const THEME_KEY = "portfolio-theme";
   const metaTheme = document.getElementById("meta-theme-color");
 
