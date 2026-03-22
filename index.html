@@ -1,194 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thạch Hoài Phúc - Web Developer. Xây dựng ứng dụng web hiện đại với JavaScript, React, PHP, Node.js.">
+  <meta name="theme-color" content="#0a0e17" id="meta-theme-color">
+  <title>Thạch Hoài Phúc | Web Developer Portfolio</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Thạch Hoài Phúc | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var s = localStorage.getItem("portfolio-theme");
+      var p = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", s || (p ? "light" : "dark"));
+    })();
+  </script>
 </head>
 
 <body>
-
-<div id="particles-js"></div>
-<div class="cursor-glow"></div>
-
-<header>
-
-<nav class="navbar">
-
-<h2 class="logo">&lt;/&gt; PhucDev</h2>
-
-<ul>
-
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Hello, I'm <span class="gradient">Thạch Hoài Phúc</span></h1>
-
-<h2 class="typing"></h2>
-
-<p>Web Developer building modern web applications.</p>
-
-<div class="buttons">
-
-<a href="#projects" class="btn">View Projects</a>
-
-<a href="#" class="btn-outline">Download CV</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills" class="skills-section">
-
-<h2>Skills & Expertise</h2>
-
-<div class="skills-grid">
-
-<div class="skill-card">
-
-<h3><i class="fas fa-globe"></i> Frontend Development</h3>
-
-<ul>
-<li>JavaScript, TypeScript</li>
-<li>ReactJS, Tailwind CSS (Responsive Design)</li>
-<li>Basic animations with CSS</li>
-</ul>
-
-</div>
-
-
-<div class="skill-card">
-
-<h3><i class="fas fa-database"></i> Backend Development</h3>
-
-<ul>
-<li>PHP, NodeJS</li>
-<li>REST API Development</li>
-<li>MySQL, MongoDB</li>
-</ul>
-
-</div>
-
-
-<div class="skill-card">
-
-<h3><i class="fas fa-code-branch"></i> Tools and Version Control</h3>
-
-<ul>
-<li>Git, GitHub</li>
-<li>VS Code</li>
-<li>Linux basic</li>
-</ul>
-
-</div>
-
-
-<div class="skill-card">
-
-<h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
-
-<ul>
-<li>React Native (basic)</li>
-</ul>
-
-</div>
-
-</div>
-
-
-<h3 class="soft-title">Soft Skills</h3>
-
-<div class="soft-skills">
-
-<div class="soft-card">Communication skills</div>
-<div class="soft-card">Critical thinking</div>
-<div class="soft-card">Public speaking</div>
-<div class="soft-card">Teamwork</div>
-<div class="soft-card">Problem solving</div>
-
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects" class="section reveal">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-
-<h3>T&T Shop</h3>
-
-<p>E-commerce website with PHP MVC</p>
-
-</div>
-
-<div class="card">
-
-<h3>Portfolio</h3>
-
-<p>Developer portfolio website</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="section reveal">
-
-<h2>Contact</h2>
-
-<p>Email: phuc@gmail.com</p>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Thạch Hoài Phúc</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  <div id="particles-js" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#" class="logo">&lt;<span>Phuc</span>/&gt;</a>
+      <div class="nav-right">
+        <button class="theme-toggle" aria-label="Chuyển chế độ sáng/tối" title="Chế độ sáng/tối">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+          <i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+        <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-content container">
+        <p class="hero-label">Xin chào, tôi là</p>
+        <h1>Thạch Hoài <span class="gradient">Phúc</span></h1>
+        <p class="hero-role typing-wrap"><span class="typing"></span><span class="caret">|</span></p>
+        <p class="hero-desc">Web Developer — xây dựng ứng dụng web hiện đại, responsive và trải nghiệm người dùng tốt.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Xem dự án</a>
+          <a href="#contact" class="btn btn-outline">Liên hệ</a>
+          <a href="#" class="btn btn-ghost" download>Download CV</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-about reveal">
+      <div class="container">
+        <span class="section-label">01. About</span>
+        <h2 class="section-title">Về tôi</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Tôi là developer đam mê xây dựng sản phẩm web từ frontend đến backend. Tập trung vào code sạch, hiệu năng và trải nghiệm người dùng.</p>
+            <p>Luôn học hỏi công nghệ mới và áp dụng vào thực tế dự án.</p>
+            <ul class="about-highlights">
+              <li><i class="fas fa-check"></i> Frontend & Backend</li>
+              <li><i class="fas fa-check"></i> REST API & Database</li>
+              <li><i class="fas fa-check"></i> Version control & Collaboration</li>
+            </ul>
+          </div>
+          <div class="about-visual">
+            <div class="avatar-frame">
+              <img src="assets/avatar.png" alt="Thạch Hoài Phúc" class="avatar-img" width="220" height="220">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-skills reveal">
+      <div class="container">
+        <span class="section-label">02. Skills</span>
+        <h2 class="section-title">Kỹ năng & Công nghệ</h2>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-globe"></i></div>
+            <h3>Frontend</h3>
+            <ul>
+              <li>JavaScript, TypeScript</li>
+              <li>React, Tailwind CSS</li>
+              <li>Responsive, CSS animations</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend</h3>
+            <ul>
+              <li>PHP, Node.js</li>
+              <li>REST API</li>
+              <li>MySQL, MongoDB</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>Tools & DevOps</h3>
+            <ul>
+              <li>Git, GitHub</li>
+              <li>VS Code</li>
+              <li>Linux cơ bản</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Mobile</h3>
+            <ul>
+              <li>React Native (cơ bản)</li>
+            </ul>
+          </article>
+        </div>
+        <h3 class="soft-title">Soft skills</h3>
+        <div class="soft-skills">
+          <span class="soft-tag">Giao tiếp</span>
+          <span class="soft-tag">Tư duy phản biện</span>
+          <span class="soft-tag">Thuyết trình</span>
+          <span class="soft-tag">Làm việc nhóm</span>
+          <span class="soft-tag">Giải quyết vấn đề</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-projects reveal">
+      <div class="container">
+        <span class="section-label">03. Projects</span>
+        <h2 class="section-title">Dự án đã làm</h2>
+        <div class="projects-grid">
+          <a href="https://github.com/Loki414/web-b-n-v-xe_-n-chuy-n-ng-nh.git" class="project-card project-card-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-header">
+              <i class="fas fa-folder project-folder"></i>
+              <span class="project-links" aria-hidden="true">
+                <span class="project-link-icon"><i class="fab fa-github"></i></span>
+              </span>
+            </div>
+            <h3>Web quản lý bán vé xe</h3>
+            <p>Hệ thống bán vé xe khách: REST API Spring Boot (JWT, MySQL), giao diện web Spring MVC + Thymeleaf.</p>
+            <ul class="project-tech">
+              <li>Spring Boot</li>
+              <li>Thymeleaf</li>
+              <li>MySQL</li>
+            </ul>
+          </a>
+          <article class="project-card">
+            <div class="project-header">
+              <i class="fas fa-folder project-folder"></i>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3>Portfolio</h3>
+            <p>Trang portfolio developer với hiệu ứng particles, typing và giao diện responsive.</p>
+            <ul class="project-tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-contact reveal">
+      <div class="container contact-wrap">
+        <span class="section-label">04. Contact</span>
+        <h2 class="section-title">Liên hệ</h2>
+        <p class="contact-intro">Bạn có dự án hoặc câu hỏi? Hãy gửi tin nhắn — tôi sẽ phản hồi sớm.</p>
+        <a href="mailto:phuc@gmail.com" class="contact-email">phuc@gmail.com</a>
+        <div class="social-links">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Thiết kế & xây dựng bởi <strong>Thạch Hoài Phúc</strong></p>
+      <p class="footer-year">© 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
