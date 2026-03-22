@@ -626,16 +626,25 @@ a.project-card-link:hover .project-link-icon {
   font-size: 1.05rem;
 }
 
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.contact-phone,
 .contact-email {
   display: inline-block;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-  margin-bottom: 32px;
   transition: color var(--transition), transform var(--transition);
 }
 
+.contact-phone:hover,
 .contact-email:hover {
   color: var(--accent-secondary);
   transform: translateY(-2px);
