@@ -53,6 +53,7 @@
     <!-- Hero -->
     <section class="hero" id="hero">
       <div class="hero-content container">
+        <p class="hero-badge"><i class="fas fa-circle-check"></i> Open to Internship Opportunities</p>
         <p class="hero-label">Hello, I&apos;m</p>
         <h1>Thạch Hoài <span class="gradient">Phúc</span></h1>
         <p class="hero-role typing-wrap"><span class="typing"></span><span class="caret">|</span></p>
@@ -61,6 +62,11 @@
           <a href="#projects" class="btn btn-primary">View projects</a>
           <a href="#contact" class="btn btn-outline">Contact</a>
           <a href="assets/cv-thach-hoai-phuc.pdf" class="btn btn-ghost" download="CV-Software-Engineering-Intern-Thach-Hoai-Phuc.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric-item"><strong>3+</strong><span>End-to-end Projects</span></div>
+          <div class="metric-item"><strong>2</strong><span>Full-stack Systems</span></div>
+          <div class="metric-item"><strong>1</strong><span>Cross-platform App</span></div>
         </div>
       </div>
       <div class="scroll-hint">
@@ -88,6 +94,10 @@
           <div class="about-visual">
             <div class="avatar-frame">
               <img src="assets/avatar.png" alt="Thạch Hoài Phúc" class="avatar-img" width="220" height="220">
+            </div>
+            <div class="about-note">
+              <i class="fas fa-briefcase"></i>
+              <span>Seeking Software Engineering Internship</span>
             </div>
           </div>
         </div>
@@ -155,6 +165,10 @@
         <h2 class="section-title">Featured projects</h2>
         <div class="projects-grid">
           <a href="https://github.com/Loki414/web-b-n-v-xe_-n-chuy-n-ng-nh.git" class="project-card project-card-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-media project-media-bus" aria-hidden="true">
+              <i class="fas fa-bus"></i>
+              <span>Route • Seats • Checkout</span>
+            </div>
             <div class="project-header">
               <i class="fas fa-folder project-folder"></i>
               <span class="project-links" aria-hidden="true">
@@ -162,7 +176,7 @@
               </span>
             </div>
             <h3>Intercity bus ticketing system</h3>
-            <p>Full-stack web app for intercity bus tickets: search trips → interactive seat map → checkout → confirmation; seat locking to prevent double-booking; JWT/RBAC for customers and admins; admin dashboard for routes, revenue, and booking analytics; REST API + Thymeleaf in sync; Docker &amp; MySQL.</p>
+            <p>Full-stack web app for intercity bus tickets: search trips, interactive seat map, secure checkout, and booking confirmation; includes JWT/RBAC, seat-locking, and admin analytics dashboard.</p>
             <ul class="project-tech">
               <li>Java 17</li>
               <li>Spring Boot 3</li>
@@ -173,18 +187,19 @@
               <li>Docker</li>
             </ul>
           </a>
-          <a href="https://github.com/Loki414/App-MusicAir" class="project-card project-card-link project-card--branded" target="_blank" rel="noopener noreferrer">
-            <div class="project-logo-wrap">
-              <img src="assets/musicair-logo.png" alt="Music Air logo" class="project-logo-img" width="200" height="120" loading="lazy">
+          <a href="https://github.com/Loki414/App-MusicAir" class="project-card project-card-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-media project-media-music" aria-hidden="true">
+              <i class="fas fa-music"></i>
+              <span>Social • AI • Realtime</span>
             </div>
             <div class="project-header">
-              <span class="project-folder-spacer" aria-hidden="true"></span>
+              <i class="fas fa-folder project-folder"></i>
               <span class="project-links" aria-hidden="true">
                 <span class="project-link-icon"><i class="fab fa-github"></i></span>
               </span>
             </div>
             <h3>Music Air</h3>
-            <p>Cross-platform music social network: AI-driven listening insights, Spotify &amp; OpenAI integration; social feed and real-time chat (SignalR), JWT/RBAC, and an admin suite.</p>
+            <p>Cross-platform music social network with AI-driven recommendations, Spotify integration, social feed, and real-time chat powered by SignalR.</p>
             <ul class="project-tech">
               <li>Flutter</li>
               <li>ASP.NET Core 8</li>
@@ -192,8 +207,28 @@
               <li>SQL Server</li>
               <li>SignalR</li>
               <li>JWT</li>
-              <li>Spotify API</li>
-              <li>OpenAI</li>
+            </ul>
+          </a>
+          <a href="https://github.com/Loki414/HethongtimPhongTro" class="project-card project-card-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-media project-media-room" aria-hidden="true">
+              <i class="fas fa-house"></i>
+              <span>Listings • Maps • Admin</span>
+            </div>
+            <div class="project-header">
+              <i class="fas fa-folder project-folder"></i>
+              <span class="project-links" aria-hidden="true">
+                <span class="project-link-icon"><i class="fab fa-github"></i></span>
+              </span>
+            </div>
+            <h3>Room rental finder system</h3>
+            <p>Full-stack room rental platform with role-based auth, listing management, image upload, and React frontend consuming REST APIs.</p>
+            <ul class="project-tech">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Sequelize</li>
+              <li>MySQL</li>
+              <li>React</li>
+              <li>JWT/RBAC</li>
             </ul>
           </a>
         </div>

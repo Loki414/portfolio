@@ -95,6 +95,40 @@
     });
   }
 
+  // ----- Active nav link on scroll -----
+  const sectionIds = ["about", "skills", "projects", "contact"];
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  function setActiveNav(id) {
+    navAnchors.forEach(function (anchor) {
+      const isActive = anchor.getAttribute("href") === "#" + id;
+      anchor.classList.toggle("active", isActive);
+    });
+  }
+
+  function updateActiveNavOnScroll() {
+    let current = sectionIds[0];
+    const offset = window.scrollY + window.innerHeight * 0.3;
+
+    sectionIds.forEach(function (id) {
+      const section = document.getElementById(id);
+      if (!section) return;
+      if (offset >= section.offsetTop) current = id;
+    });
+
+    setActiveNav(current);
+  }
+
+  navAnchors.forEach(function (anchor) {
+    anchor.addEventListener("click", function () {
+      const id = this.getAttribute("href").replace("#", "");
+      setActiveNav(id);
+    });
+  });
+
+  window.addEventListener("scroll", updateActiveNavOnScroll);
+  updateActiveNavOnScroll();
+
   // ----- Scroll reveal -----
   function reveal() {
     const reveals = document.querySelectorAll(".reveal");
