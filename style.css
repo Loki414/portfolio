@@ -499,32 +499,43 @@ body {
   font-size: 0.85rem;
 }
 
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
 .avatar-frame {
   position: relative;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  line-height: 0;
+  padding: 4px;
+  border-radius: calc(var(--radius-lg) + 4px);
+  border: 1px solid rgba(34, 193, 195, 0.35);
+  background: rgba(34, 193, 195, 0.04);
 }
 
 .avatar-img {
   width: 220px;
   height: 220px;
+  max-width: 100%;
   border-radius: var(--radius-lg);
   object-fit: cover;
-  border: 1px solid var(--border);
+  border: none;
   display: block;
-  transition: var(--transition);
+  transition: transform var(--transition);
 }
 
-.avatar-frame::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border: 1px solid var(--accent);
-  border-radius: calc(var(--radius-lg) + 4px);
-  opacity: 0.4;
-  z-index: -1;
+.avatar-frame:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(34, 193, 195, 0.2);
 }
 
 .avatar-frame:hover .avatar-img {
-  border-color: var(--accent);
+  transform: scale(1.01);
 }
 
 .about-note {
@@ -958,9 +969,10 @@ a.project-card-link:hover .project-link-icon {
 
   .about-visual {
     order: -1;
+    width: 100%;
   }
 
-  .avatar-img {
+  .avatar-frame {
     margin: 0 auto;
   }
 
